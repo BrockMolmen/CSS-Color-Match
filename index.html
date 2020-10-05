@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Color Match</title>
-    <script src="js/main.js" defer></script>
-    <style rel="stylesheet" src="css/style.css"></style>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css"></link>
 </head>
 
 <body>
@@ -15,10 +15,18 @@
         <h1>CSS Color Quiz</h1>
         <h2>how many do you know</h2>
 
-        <button>Start</button>
-        <button>Reset</button>
+        <button class="startButton">Start</button>
+        <button class="resetButton">Reset</button>
+        <button class="submitButton">Submit</button>
+
+        <h3 class="playerScoreContainer">Score: 0</h3>
     </nav>
 
+    <main>
+        <div class = "levelContainer" id="levelContainer"></div><
+
+        <div class = "answerBucket" id="answerBucket">possible answers go here</div>
+    </main>
 
 
 </body>

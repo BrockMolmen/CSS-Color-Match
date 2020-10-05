@@ -1,0 +1,31 @@
+html {
+    background:rgb(87, 75, 108);
+    color: goldenrod;
+}
+#levelContainer{ 
+    display: flex;
+    justify-content: space-around;
+}
+
+#levelContainer div{   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 15vh;
+    height: 15vh;
+    border: 5px grey;
+    border-radius: 50%;
+}
+
+input {
+    background: rgb(69, 69, 69);
+    color: white;
+    text-align: center;
+    height: 25px;
+    width: 100%;
+    opacity: 50%;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
