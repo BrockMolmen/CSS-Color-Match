@@ -1,20 +1,39 @@
-html {
-    background:rgb(87, 75, 108);
-    color: goldenrod;
+
+
+* {
+    background-color:  rgb(45, 40, 55);
+    color: rgb(130, 112, 160);
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+main { 
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 #levelContainer{ 
     display: flex;
     justify-content: space-around;
 }
 
-#levelContainer div{   
+#levelContainer div {   
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-content: center;
     width: 15vh;
     height: 15vh;
-    border: 5px grey;
-    border-radius: 50%;
+    border: 5px solid white;
+    border-radius: 30%;
+    margin: 10px;
+
+
 }
 
 input {
@@ -27,5 +46,12 @@ input {
     border: none;
     font-weight: bold;
     font-size: 20px;
+    margin-top: 80px;
 }
 
+
+
+nav {
+    /* background-color: blanchedalmond; */
+
+}

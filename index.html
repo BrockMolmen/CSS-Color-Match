@@ -6,26 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Color Match</title>
     <script src="./js/main.js" defer></script>
-    <link rel="stylesheet" href="./css/style.css"></link>
+    <link rel="stylesheet" href="./css/style.css">
+    </link>
 </head>
 
 <body>
 
     <nav>
-        <h1>CSS Color Quiz</h1>
-        <h2>how many do you know</h2>
-
-        <button class="startButton">Start</button>
-        <button class="resetButton">Reset</button>
-        <button class="submitButton">Submit</button>
-
+        <div class="title">
+            <h1>CSS Color Quiz</h1>
+            <h4>how many do you know</h4>
+        </div>
+        <div class="buttons">
+            <button class="startButton">Start</button>
+            <button class="resetButton">Reset</button>
+            <button class="submitButton">Submit</button>
+        </div>
         <h3 class="playerScoreContainer">Score: 0</h3>
     </nav>
 
     <main>
-        <div class = "levelContainer" id="levelContainer"></div><
+        <div class="levelContainer" id="levelContainer"></div>
 
-        <div class = "answerBucket" id="answerBucket">possible answers go here</div>
+        <ul class="answerPool" id="answerPool"></ul>
     </main>
 
 

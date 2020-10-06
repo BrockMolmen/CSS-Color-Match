@@ -6,7 +6,7 @@ let playerScore = 0
 // color Levels
 const CyanLevelColors = ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal']
 
-// crate squares with color in them
+//================================crate squares with color in them
 const levelOne = () => {
     for (let i = 0; i < CyanLevelColors.length; i++) {
         let colorName = CyanLevelColors[i]
@@ -16,16 +16,25 @@ const levelOne = () => {
         createColorBox.setAttribute('class', 'colorBox')
         levelContainer.appendChild(createColorBox)
 
-// add Input box over the color box
+        //================================add Input box over the color box
         let guessBox = document.createElement('input')
         guessBox.setAttribute('class', 'answerInput')
-        // docuemnt.querySelector('colorBox').appendChild(guessBox)
         createColorBox.appendChild(guessBox)
 
+        //================================how to populate the poosible answersPool
+        //need to be random order. or colors random order // maybe seprate fuctions? in levelObject??
+        let possAnswer = document.createElement('li')
+        possAnswer.setAttribute('class', 'choice')
+        possAnswer.innerHTML = colorName
+        document.getElementById('answerPool').appendChild(possAnswer)
     }
-}
-//how to populate the poosible answersBucket
+    /////////////////////////SHuffle?
+    
+    }
 
+//remove start function once in game
+
+//resetButton to clear colors, round, and score
 
 //function for submitButton to check answerInput aginst backgroundColor??
 
