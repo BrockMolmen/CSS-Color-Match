@@ -1,11 +1,11 @@
 
 
 * {
-    background-color:  rgb(45, 40, 55);
-    color: rgb(130, 112, 160);
+    background-color:  rgb(51, 63, 78);
+    color: rgb(132, 157, 195);
     box-sizing: border-box;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -18,6 +18,7 @@ main {
     justify-content: space-around;
     flex-direction: row;
 }
+
 #levelContainer{ 
     display: flex;
     justify-content: space-around;
@@ -25,33 +26,26 @@ main {
 
 #levelContainer div {   
     display: flex;
-    flex-direction: column;
     align-content: center;
     width: 15vh;
     height: 15vh;
     border: 5px solid white;
     border-radius: 30%;
     margin: 10px;
-
-
 }
 
 input {
-    background: rgb(69, 69, 69);
+    background: rgba(69, 69, 69, 0.6);
     color: white;
     text-align: center;
     height: 25px;
     width: 100%;
-    opacity: 50%;
+    /* opacity: 50%; */
     border: none;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 80px;
+    /* margin-top: 70px; */
 }
-
-
-
-nav {
-    /* background-color: blanchedalmond; */
-
+input:focus {
+    outline: none;
 }
