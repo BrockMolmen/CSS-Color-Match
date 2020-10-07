@@ -72,9 +72,23 @@ document.querySelector('.startButton').addEventListener('click', () => {
 
 const buildAnswerArrays = () => {
     let playerAnswers = document.querySelectorAll('.answerInput')
-    let correctAnswers = document.querySelectorAll('.colorBox')//.style.backgroundColor.value
+    let correctAnswers = document.querySelectorAll('.colorBox')
+    ////test test//
     console.log(playerAnswers[0].value)
     console.log(correctAnswers[0].style.backgroundColor)
+
+    // if (playerAnswers[0].value == correctAnswers[0].style.backgroundColor) {console.log('askldfja;lskdf')}
+    for (let i = 0; i <= correctAnswers.length; i++) {
+        if (playerAnswers[i].value ===  correctAnswers[i].style.backgroundColor) {
+            playerScore++
+        } 
+        // else if (this.playerAnswers[i].value != this.correctAnswers[i].style.backgroundColor) {
+        //     console.log('wrong')
+        // }
+        // }
+        console.log("-==-==-=-==--=")
+        console.log(playerScore)
+    }}
     // for (let i = 0; i <= correctAnswers.length; i++) {
     //     if (playerAnswers.[i] == )
     // }
@@ -87,7 +101,7 @@ const buildAnswerArrays = () => {
 
     // console.log('p', playerAnswer, 'c', correctAnswer)
     // if ( playerAnswer == )
-}
+// }
 
 
 // let resetStage = () => {
@@ -98,7 +112,7 @@ const buildAnswerArrays = () => {
 
 document.querySelector('.submitButton').addEventListener('click', () => {
     buildAnswerArrays()
-    compareAnswers()
+    // compareAnswers()
 })
 
 // document.querySelector('.resetButton').addEventListener('click', resetStage)
