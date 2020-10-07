@@ -7,8 +7,9 @@
 }
 /* GRID */
 .parent {
+    width: 100vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr));
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -36,11 +37,12 @@ main {
     /* justify-content: space-around; */
 }
 
-#levelContainer div {   
+#colorBox{   
     display: flex;
+    flex-flow: row wrap;
     align-content: center;
-    width: 15vh;
-    height: 15vh;
+    width: 140px;
+    height: 140px;
     border: 5px solid white;
     border-radius: 30%;
     margin: 10px;
@@ -52,30 +54,40 @@ input {
     text-align: center;
     height: 25px;
     width: 100%;
-    /* opacity: 50%; */
     border: none;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 70px;
 }
 input:focus {
     outline: none;
 }
 /* GRID STYLES */
 #navGrid {
-    /* background-color:  rgb(51, 63, 78);
-    color: rgb(132, 157, 195); */
-    border: 2px dotted blue;
-    height: 100%;
+    background-color:  rgb(51, 63, 78);
+    color: rgb(132, 157, 195); 
     height: 100vh;
+    width: 200px;
 }
 #stageGrid {
-    border: 2px dotted green;
+    background-color: rgb(132, 157, 195) ;
+    color: rgb(51, 63, 78); 
     height: 100vh;
+    width: 100%;
 
 }
 
 #poolGrid {
-    border: 2px dotted red;
+    background-color:  rgb(51, 63, 78);
+    color: rgb(132, 157, 195); 
     height: 100vh;
+    width: 150px;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    #levelContainer{
+        display: flex;
+        flex-direction: column;
+
+    }
 }

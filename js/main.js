@@ -30,11 +30,13 @@ const levelOne = {
             const createColorBox = document.createElement('div')
             createColorBox.style.backgroundColor = this.CyanLevelColors[i]
             createColorBox.setAttribute('class', 'colorBox')
+            createColorBox.setAttribute('id', 'colorBox')
             levelContainer.appendChild(createColorBox)
             //================================add Input box over the color box
             let guessBox = document.createElement('input')
             guessBox.setAttribute('type', 'text')
             guessBox.setAttribute('class', 'answerInput')
+            guessBox.setAttribute('id', 'answerInput')
             createColorBox.appendChild(guessBox)
         }
     },
@@ -55,14 +57,9 @@ const levelOne = {
     // shuffleColors()
     // getPool()
 
-    ////////////////////////////checkScore is not working
-    // checkScore() {
-    //     ///need to compare the input aginst the div background color..
-    //     let playerAnswer = parseInt(document.getElementById('answerInput').innerHTML)
-    //     let correctAnswer = parseInt(document.getElementById('colorBox').backgroundColor)
-    //     console.log('p', playerAnswer, 'c', correctAnswer)
-    //     // if ( playerAnswer == )
-    // }
+    //////////////////////////checkScore is not working
+    ///need to compare the input aginst the div background color..
+    //build array with selectorall. then build loops to check [i] postion 
 }
 
 document.querySelector('.startButton').addEventListener('click', () => {
@@ -73,10 +70,38 @@ document.querySelector('.startButton').addEventListener('click', () => {
 }
 )
 
-document.querySelector('.submitButton').addEventListener('click', levelOne.checkScore)
+const buildAnswerArrays = () => {
+    let playerAnswers = document.querySelectorAll('.answerInput')
+    let correctAnswers = document.querySelectorAll('.colorBox')//.style.backgroundColor.value
+    console.log(playerAnswers[0].value)
+    console.log(correctAnswers[0].style.backgroundColor)
+    // for (let i = 0; i <= correctAnswers.length; i++) {
+    //     if (playerAnswers.[i] == )
+    // }
 
 
+    ///new method that check check asnwers
+    //aswer array . player answer
 
+    // let correctCheck = Array.apply(playerCheck)
+
+    // console.log('p', playerAnswer, 'c', correctAnswer)
+    // if ( playerAnswer == )
+}
+
+
+// let resetStage = () => {
+//     //resets stage
+//     document.querySelectorAll('input').reset()
+// }
+
+
+document.querySelector('.submitButton').addEventListener('click', () => {
+    buildAnswerArrays()
+    compareAnswers()
+})
+
+// document.querySelector('.resetButton').addEventListener('click', resetStage)
 
 // ///////////////////////////////////////////////////////////////////////////////////////
 // // color Levels
