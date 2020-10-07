@@ -33,15 +33,16 @@ const levelOne = {
             levelContainer.appendChild(createColorBox)
             //================================add Input box over the color box
             let guessBox = document.createElement('input')
+            guessBox.setAttribute('type', 'text')
             guessBox.setAttribute('class', 'answerInput')
             createColorBox.appendChild(guessBox)
         }
     },
-////////////////////////////////buildStage works and randomized colors
+    ////////////////////////////////buildStage works and randomized colors
     // shuffleColors()
     // buildStage()
 
-    getPool () {
+    getPool() {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             let possAnswer = document.createElement('li')
@@ -53,14 +54,26 @@ const levelOne = {
     ////////////////////////////getPool Works with shufflecolors
     // shuffleColors()
     // getPool()
+
+    ////////////////////////////checkScore is not working
+    // checkScore() {
+    //     ///need to compare the input aginst the div background color..
+    //     let playerAnswer = parseInt(document.getElementById('answerInput').innerHTML)
+    //     let correctAnswer = parseInt(document.getElementById('colorBox').backgroundColor)
+    //     console.log('p', playerAnswer, 'c', correctAnswer)
+    //     // if ( playerAnswer == )
+    // }
 }
-const checkScore = () => {
-    ///need to compare the input aginst the div background color..
-    let playerAnswer = document.getElementsByClassName('answerInput').select()
-    let correctAnswer = docuemtn.getElementsByClassName('colorBox').backgroundColor
-    console.log('p', playerAnswer, 'c', correctAnswer)
-    // if ( playerAnswer == )
+
+document.querySelector('.startButton').addEventListener('click', () => {
+    levelOne.shuffleColors()
+    levelOne.buildStage()
+    levelOne.shuffleColors()
+    levelOne.getPool()
 }
+)
+
+document.querySelector('.submitButton').addEventListener('click', levelOne.checkScore)
 
 
 
@@ -155,11 +168,3 @@ const checkScore = () => {
 
 
 /// Making the buttons work
-document.querySelector('.startButton').addEventListener('click', () => {
-    levelOne.shuffleColors()
-    levelOne.buildStage()
-    levelOne.shuffleColors()
-    levelOne.getPool()}
-    )
-
-    document.querySelector('.submitButton').addEventListener('click', checkScore())
