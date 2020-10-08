@@ -3,9 +3,6 @@ console.log('is this thing on?')
 let roundCount = 0
 let playerScore = 0
 
-////////////////////////////////////////////
-//can i build it into an object for each level////////
-
 const levelOne = {
     // Cyan Color Array
     CyanLevelColors: ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal'],
@@ -40,9 +37,7 @@ const levelOne = {
             createColorBox.appendChild(guessBox)
         }
     },
-    ////////////////////////////////buildStage works and randomized colors
-    // shuffleColors()
-    // buildStage()
+
 
     getPool() {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
@@ -53,13 +48,6 @@ const levelOne = {
             document.getElementById('answerPool').appendChild(possAnswer)
         }
     },
-    ////////////////////////////getPool Works with shufflecolors
-    // shuffleColors()
-    // getPool()
-
-    //////////////////////////checkScore is not working
-    ///need to compare the input aginst the div background color..
-    //build array with selectorall. then build loops to check [i] postion 
 }
 
 document.querySelector('.startButton').addEventListener('click', () => {
@@ -70,30 +58,33 @@ document.querySelector('.startButton').addEventListener('click', () => {
 }
 )
 
-const buildAnswerArrays = () => {
+const checkScore = () => {
     let playerAnswers = document.querySelectorAll('.answerInput')
     let correctAnswers = document.querySelectorAll('.colorBox')
     ////test test//
     console.log(playerAnswers[0].value)
     console.log(correctAnswers[0].style.backgroundColor)
 
+//////check check check//////
+    if (playerAnswers[0].value ===  correctAnswers[0].style.backgroundColor) {console.log('00000')}
+    if (playerAnswers[1].value ===  correctAnswers[1].style.backgroundColor) {console.log('1111111')}
+    if (playerAnswers[2].value ===  correctAnswers[2].style.backgroundColor) {console.log('22222')}
+    if (playerAnswers[3].value ===  correctAnswers[3].style.backgroundColor) {console.log('333333')}
+    if (playerAnswers[4].value ===  correctAnswers[4].style.backgroundColor) {console.log('444444')}
+    if (playerAnswers[0].value !==  correctAnswers[0].style.backgroundColor) {console.log('444444')}
+/////////////////////////////
 
-    if (playerAnswers[0].value ==  correctAnswers[0].style.backgroundColor) {console.log('00000')}
-    if (playerAnswers[1].value ==  correctAnswers[1].style.backgroundColor) {console.log('1111111')}
-    if (playerAnswers[2].value ==  correctAnswers[2].style.backgroundColor) {console.log('22222')}
-    if (playerAnswers[3].value ==  correctAnswers[3].style.backgroundColor) {console.log('333333')}
-    if (playerAnswers[4].value ==  correctAnswers[4].style.backgroundColor) {console.log('444444')}
-    // for (let i = 0; i <= correctAnswers.length; i++) {
-    //     if (playerAnswers[i].value ==  correctAnswers[i].style.backgroundColor) {
-    //         playerScore++
-    //     } 
-        // else if (playerAnswers[i].value != correctAnswers[i].style.backgroundColor) {
-        //     console.log('wrong')
-        // }
+    for (let i = 0; i <= correctAnswers.length; i++) {
+        if (playerAnswers[i].value ===  correctAnswers[i].style.backgroundColor) {
+            playerScore++
+        } 
+        else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
+            console.log('wrong')
         }
         console.log("-==-==-=-==--=")
         console.log(playerScore)
-    // }
+        }
+    }
 
     ///new method that check check asnwers
     //aswer array . player answer
@@ -112,7 +103,7 @@ const buildAnswerArrays = () => {
 
 
 document.querySelector('.submitButton').addEventListener('click', () => {
-    buildAnswerArrays()
+    checkScore()
     // compareAnswers()
 })
 
