@@ -65,41 +65,20 @@ const checkScore = () => {
     console.log(playerAnswers[0].value)
     console.log(correctAnswers[0].style.backgroundColor)
 
-//////check check check//////
-    if (playerAnswers[0].value ===  correctAnswers[0].style.backgroundColor) {console.log('00000')}
-    if (playerAnswers[1].value ===  correctAnswers[1].style.backgroundColor) {console.log('1111111')}
-    if (playerAnswers[2].value ===  correctAnswers[2].style.backgroundColor) {console.log('22222')}
-    if (playerAnswers[3].value ===  correctAnswers[3].style.backgroundColor) {console.log('333333')}
-    if (playerAnswers[4].value ===  correctAnswers[4].style.backgroundColor) {console.log('444444')}
-    if (playerAnswers[0].value !==  correctAnswers[0].style.backgroundColor) {console.log('444444')}
-/////////////////////////////
 
-    for (let i = 0; i <= correctAnswers.length; i++) {
-        if (playerAnswers[i].value ===  correctAnswers[i].style.backgroundColor) {
+
+    for (let i = 0; i < correctAnswers.length; i++) {
+        if (playerAnswers[i].value === correctAnswers[i].style.backgroundColor) {
             playerScore++
-        } 
+        }
         else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
             console.log('wrong')
         }
         console.log("-==-==-=-==--=")
         console.log(playerScore)
-        }
     }
+}
 
-    ///new method that check check asnwers
-    //aswer array . player answer
-
-    // let correctCheck = Array.apply(playerCheck)
-
-    // console.log('p', playerAnswer, 'c', correctAnswer)
-    // if ( playerAnswer == )
-// }
-
-
-// let resetStage = () => {
-//     //resets stage
-//     document.getElementById('input').innerHTML = ''
-// }
 
 
 document.querySelector('.submitButton').addEventListener('click', () => {
@@ -107,6 +86,10 @@ document.querySelector('.submitButton').addEventListener('click', () => {
     // compareAnswers()
 })
 
+    ///////reset Inputs ****** use a for loop *****
+//     let resetStage = () => {
+//         document.querySelector('form').value = ''
+//     }
 // document.querySelector('.resetButton').addEventListener('click', resetStage)
 
 
