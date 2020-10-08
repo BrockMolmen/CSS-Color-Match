@@ -4,6 +4,7 @@ let roundCount = 0
 let playerScore = 0
 
 const levelOne = {
+
     // Cyan Color Array
     CyanLevelColors: ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal'],
     // Let's make some Idividule Fuctions that work like below...
@@ -34,6 +35,7 @@ const levelOne = {
             guessBox.setAttribute('type', 'text')
             guessBox.setAttribute('class', 'answerInput')
             guessBox.setAttribute('id', 'answerInput')
+            guessBox.setAttribute('data-value', [i])
             createColorBox.appendChild(guessBox)
         }
     },
@@ -50,8 +52,6 @@ const levelOne = {
     },
     /////reset Inputs ****** use a for loop *****
     resetStage() {
-        // for (let i = 0; i < this.CyanLevelColors.length) {
-        // }
         document.getElementById('levelContainer').reset()
     }
 }
@@ -72,6 +72,10 @@ const checkScore = () => {
         }
         else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
             console.log('wrong')
+            //i want to change the opacity of the incorrect answers
+            playerAnswers[i].style.color = 'rgba(255, 255, 255, 0.5)'
+            // let parentNode = playerAnswers[i].parentNode.style.opacity = "70%"
+            // console.log(parentNode)
 
         }
         document.getElementById('playerScoreContainer').innerHTML = `Score: ${playerScore}`
