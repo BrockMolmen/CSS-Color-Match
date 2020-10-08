@@ -48,15 +48,14 @@ const levelOne = {
             document.getElementById('answerPool').appendChild(possAnswer)
         }
     },
+    /////reset Inputs ****** use a for loop *****
+    resetStage() {
+        // for (let i = 0; i < this.CyanLevelColors.length) {
+        // }
+        document.getElementById('levelContainer').reset()
+    }
 }
 
-document.querySelector('.startButton').addEventListener('click', () => {
-    levelOne.shuffleColors()
-    levelOne.buildStage()
-    levelOne.shuffleColors()
-    levelOne.getPool()
-}
-)
 
 const checkScore = () => {
     let playerAnswers = document.querySelectorAll('.answerInput')
@@ -73,24 +72,27 @@ const checkScore = () => {
         }
         else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
             console.log('wrong')
+
         }
-        console.log("-==-==-=-==--=")
-        console.log(playerScore)
+        document.getElementById('playerScoreContainer').innerHTML = `Score: ${playerScore}`
+        // console.log("-==-==-=-==--=")
+        // console.log(playerScore)
     }
+
 }
 
 
 
-document.querySelector('.submitButton').addEventListener('click', () => {
-    checkScore()
-    // compareAnswers()
+document.querySelector('.startButton').addEventListener('click', () => {
+    levelOne.shuffleColors()
+    levelOne.buildStage()
+    levelOne.shuffleColors()
+    levelOne.getPool()
 })
 
-    ///////reset Inputs ****** use a for loop *****
-//     let resetStage = () => {
-//         document.querySelector('form').value = ''
-//     }
-// document.querySelector('.resetButton').addEventListener('click', resetStage)
+document.querySelector('.submitButton').addEventListener('click', checkScore)
+
+document.querySelector('.resetButton').addEventListener('click', levelOne.resetStage)
 
 
 

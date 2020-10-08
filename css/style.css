@@ -91,3 +91,7 @@ input:focus {
 
     }
 }
+
+#playerScoreContainer {
+    font-size: 35px;
+}
