@@ -77,22 +77,23 @@ const buildAnswerArrays = () => {
     console.log(playerAnswers[0].value)
     console.log(correctAnswers[0].style.backgroundColor)
 
-    // if (playerAnswers[0].value == correctAnswers[0].style.backgroundColor) {console.log('askldfja;lskdf')}
-    for (let i = 0; i <= correctAnswers.length; i++) {
-        if (playerAnswers[i].value ===  correctAnswers[i].style.backgroundColor) {
-            playerScore++
-        } 
-        // else if (this.playerAnswers[i].value != this.correctAnswers[i].style.backgroundColor) {
+
+    if (playerAnswers[0].value ==  correctAnswers[0].style.backgroundColor) {console.log('00000')}
+    if (playerAnswers[1].value ==  correctAnswers[1].style.backgroundColor) {console.log('1111111')}
+    if (playerAnswers[2].value ==  correctAnswers[2].style.backgroundColor) {console.log('22222')}
+    if (playerAnswers[3].value ==  correctAnswers[3].style.backgroundColor) {console.log('333333')}
+    if (playerAnswers[4].value ==  correctAnswers[4].style.backgroundColor) {console.log('444444')}
+    // for (let i = 0; i <= correctAnswers.length; i++) {
+    //     if (playerAnswers[i].value ==  correctAnswers[i].style.backgroundColor) {
+    //         playerScore++
+    //     } 
+        // else if (playerAnswers[i].value != correctAnswers[i].style.backgroundColor) {
         //     console.log('wrong')
         // }
-        // }
+        }
         console.log("-==-==-=-==--=")
         console.log(playerScore)
-    }}
-    // for (let i = 0; i <= correctAnswers.length; i++) {
-    //     if (playerAnswers.[i] == )
     // }
-
 
     ///new method that check check asnwers
     //aswer array . player answer
@@ -106,7 +107,7 @@ const buildAnswerArrays = () => {
 
 // let resetStage = () => {
 //     //resets stage
-//     document.querySelectorAll('input').reset()
+//     document.getElementById('input').innerHTML = ''
 // }
 
 
@@ -116,6 +117,10 @@ document.querySelector('.submitButton').addEventListener('click', () => {
 })
 
 // document.querySelector('.resetButton').addEventListener('click', resetStage)
+
+
+
+
 
 // ///////////////////////////////////////////////////////////////////////////////////////
 // // color Levels
@@ -162,48 +167,3 @@ document.querySelector('.submitButton').addEventListener('click', () => {
 //         document.getElementById('answerPool').appendChild(possAnswer)
 // }}
 // ////////////////////////////getPool Works with shufflecolors
-// shuffleColors()
-// getPool()
-
-// const checkScore = () => {
-// how to check across levelcontainer.colorbox and levelcontainer.colorbox.answerinput
-// }
-
-// //================================crate squares with color in them
-// const levelOne = () => {
-//     for (let i = 0; i < CyanLevelColors.length; i++) {
-//         let colorName = CyanLevelColors[i]
-//         //console.log(colorName)
-//         const createColorBox = document.createElement('div')
-//         createColorBox.style.backgroundColor = CyanLevelColors[i]
-//         createColorBox.setAttribute('class', 'colorBox')
-//         levelContainer.appendChild(createColorBox)
-
-//         //================================add Input box over the color box
-//         let guessBox = document.createElement('input')
-//         guessBox.setAttribute('class', 'answerInput')
-//         createColorBox.appendChild(guessBox)
-
-//         //================================how to populate the poosible answersPool
-//         /////////////////////////SHuffle?
-//         //need to be random order. or colors random order // maybe seprate fuctions? in levelObject??
-//         let possAnswer = document.createElement('li')
-//         possAnswer.setAttribute('class', 'choice')
-//         possAnswer.innerHTML = colorName
-//         document.getElementById('answerPool').appendChild(possAnswer)
-//     }
-//     }
-
-//remove start function once in game
-
-//resetButton to clear colors, round, and score
-
-//function for submitButton to check answerInput aginst backgroundColor??
-
-// add to score
-
-//next level (does this need to be a button too?)
-
-
-
-/// Making the buttons work
