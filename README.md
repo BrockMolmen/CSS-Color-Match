@@ -6,7 +6,9 @@ I wanted to build a game that would test and sharpen the players knowledge of th
 
 ---
 ### Screenshots
-
+![Screenshot 1 - Cyan](assets/Scrnsht1.jpeg)
+![Screenshot 2 - Cyan](assets/Scrnsht2.jpeg)
+![Screenshot 1 - Yellow](assets/Scrnsht3.jpeg)
 
 ---
 ### User Story & Wireframes
@@ -33,6 +35,8 @@ I wanted to build a game that would test and sharpen the players knowledge of th
 * Now, when the player hits start, they the next level will load with new colors and answers
 * Once the player progresses through all 10 levels, it will notify the player the game is over and provide their final score.
 
+![wireframe](assets/wireframe.jpg)
+
 ---
 ### Technologies & Code Snippets
 * HTML
@@ -58,7 +62,6 @@ I wanted to build a game that would test and sharpen the players knowledge of th
 ### Credits
 * [147 Colors](http://www.colors.commutercreative.com/grid/)
 * Micheal, James, Jacob, Uyen for all debugging help.
- 
  
 ---
 ### Current State and Future Development
