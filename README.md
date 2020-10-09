@@ -61,7 +61,7 @@ I wanted to build a game that would test and sharpen the players knowledge of th
 ---
 ### Credits
 * [147 Colors](http://www.colors.commutercreative.com/grid/)
-* Micheal, James, Jacob, Uyen for all debugging help.
+
  
 ---
 ### Current State and Future Development
