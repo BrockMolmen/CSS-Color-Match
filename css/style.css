@@ -45,11 +45,12 @@ body {
     border-right: 8px solid #C2CBFF;
     color: #7FB3A7;
     min-width: 250px;
-
     text-align: center;
 }
 
 #stageGrid {
+    /* display: flex; */
+    /* justify-content: space-around; */
     background-color:#7F86B3;
     min-width: 0;
     border-right: 8px solid #C2CBFF;
@@ -59,8 +60,6 @@ body {
     background-color: #DBFFF7;
     color: #7FB3A7;
     min-width: 250px;
-    
-    
     text-align: center;
 }
 
@@ -80,7 +79,10 @@ border: 3px solid #FFE9CF;
 border-radius: 30%;
 margin: 10px;
 }
-
+h1 {
+    font-size: 36px;
+    font-weight: bolder;
+}
 input {
     background: rgba(69, 69, 69, 0.6);
     color: white;
