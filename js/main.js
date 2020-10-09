@@ -37,7 +37,7 @@ const levelOne = {
         
     },
     
-    
+    //Scraps randomized array of color names and displays them for the player to use. 
     getPool () {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
@@ -47,21 +47,14 @@ const levelOne = {
             document.getElementById('answerPool').appendChild(possAnswer)
         }
     },
-    // removing eventlistener
-    
-    /////reset Inputs ****** use a for loop *****
+    //reserts Input boxes
     resetStage() {
         document.getElementById('levelContainer').reset()
         playerScore = 0
         document.getElementById('playerScoreContainer').innerHTML = `Score: ${playerScore}`
     }
 }
-
-// removeStart = () => {
-    // document.querySelector('.startButton').removeEventListener('click', buildStage)
-    // // levelOne.getPool()
-    // },
-    
+    //grabs input and correct answers and compares them, updates score and modifies color of incorect answer
     const checkScore = () => {
         let playerAnswers = document.querySelectorAll('.answerInput')
         let correctAnswers = document.querySelectorAll('.colorBox')
@@ -78,8 +71,6 @@ const levelOne = {
         }
     }
     
-    
-    
     document.querySelector('.startButton').addEventListener('click', () => {
         levelOne.shuffleColors()
         levelOne.buildStage()
@@ -91,36 +82,6 @@ const levelOne = {
     
     document.querySelector('.resetButton').addEventListener('click', levelOne.resetStage)
     
-    // add keyup eventListener for checkscore funtion.
-    
-    
-    
-    // ///////////////////////////////////////////////////////////////////////////////////////
-    // // color Levels
-    // const CyanLevelColors = ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal']
-    
-    // // Let's make some Idividule Fuctions that work like below...
-// const shuffleColors = () => {
-//     for (let i = CyanLevelColors.length - 1; i > 0; i--) {
-//         let j = Math.floor(Math.random() * i)
-//         // console.log(j)
-//         const temp = CyanLevelColors[i]
-//         CyanLevelColors[i] = CyanLevelColors[j]
-//         CyanLevelColors[j] = temp
-// }}
-// // //////////////////////////Shuffle works and i can call it twice with differenet results
-// // shuffleColors()
-// // console.log(CyanLevelColors)
-// // shuffleColors()
-// // console.log(CyanLevelColors)
-// ///////////////////////////////////
-// const buildStage = () => {
-//     for (let i = 0; i < CyanLevelColors.length; i++) {
-//                 let colorName = CyanLevelColors[i]
-//                 const createColorBox = document.createElement('div')
-//                 createColorBox.style.backgroundColor = CyanLevelColors[i]
-//                 createColorBox.setAttribute('class', 'colorBox')
-//                 levelContainer.appendChild(createColorBox)
 
 //                 //================================add Input box over the color box
 //                 let guessBox = document.createElement('input')
