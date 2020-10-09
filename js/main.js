@@ -4,7 +4,7 @@ let roundCount = 0
 let playerScore = 0
 
 const levelOne = {
-
+    
     // Cyan Color Array
     CyanLevelColors: ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal'],
     // Let's make some Idividule Fuctions that work like below...
@@ -22,7 +22,7 @@ const levelOne = {
     // shuffleColors()
     // console.log(CyanLevelColors)
     ///////////////////////////////////
-    buildStage() {
+    buildStage: function (eventObject) {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             const createColorBox = document.createElement('div')
@@ -38,10 +38,11 @@ const levelOne = {
             guessBox.setAttribute('data-value', [i])
             createColorBox.appendChild(guessBox)
         }
+        
     },
-
-
-    getPool() {
+    
+    
+    getPool: function (eventObject) {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             let possAnswer = document.createElement('li')
@@ -50,63 +51,71 @@ const levelOne = {
             document.getElementById('answerPool').appendChild(possAnswer)
         }
     },
+    // removing eventlistener
+    
     /////reset Inputs ****** use a for loop *****
     resetStage() {
         document.getElementById('levelContainer').reset()
-    }
-}
-
-
-const checkScore = () => {
-    let playerAnswers = document.querySelectorAll('.answerInput')
-    let correctAnswers = document.querySelectorAll('.colorBox')
-    ////test test//
-    console.log(playerAnswers[0].value)
-    console.log(correctAnswers[0].style.backgroundColor)
-
-
-
-    for (let i = 0; i < correctAnswers.length; i++) {
-        if (playerAnswers[i].value === correctAnswers[i].style.backgroundColor) {
-            playerScore++
-        }
-        else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
-            console.log('wrong')
-            //i want to change the opacity of the incorrect answers
-            playerAnswers[i].style.color = 'rgba(255, 255, 255, 0.5)'
-            // let parentNode = playerAnswers[i].parentNode.style.opacity = "70%"
-            // console.log(parentNode)
-
-        }
+        playerScore = 0
         document.getElementById('playerScoreContainer').innerHTML = `Score: ${playerScore}`
-        // console.log("-==-==-=-==--=")
-        // console.log(playerScore)
     }
-
 }
 
-
-
-document.querySelector('.startButton').addEventListener('click', () => {
-    levelOne.shuffleColors()
-    levelOne.buildStage()
-    levelOne.shuffleColors()
-    levelOne.getPool()
-})
-
-document.querySelector('.submitButton').addEventListener('click', checkScore)
-
-document.querySelector('.resetButton').addEventListener('click', levelOne.resetStage)
-
-
-
-
-
-// ///////////////////////////////////////////////////////////////////////////////////////
-// // color Levels
-// const CyanLevelColors = ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal']
-
-// // Let's make some Idividule Fuctions that work like below...
+// removeStart = () => {
+    // document.querySelector('.startButton').removeEventListener('click', buildStage)
+    // // levelOne.getPool()
+    // },
+    
+    const checkScore = () => {
+        let playerAnswers = document.querySelectorAll('.answerInput')
+        let correctAnswers = document.querySelectorAll('.colorBox')
+        ////test test//
+        console.log(playerAnswers[0].value)
+        console.log(correctAnswers[0].style.backgroundColor)
+        
+        
+        
+        for (let i = 0; i < correctAnswers.length; i++) {
+            if (playerAnswers[i].value === correctAnswers[i].style.backgroundColor) {
+                playerScore++
+            }
+            else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
+                console.log('wrong')
+                //i want to change the opacity of the incorrect answers
+                playerAnswers[i].style.color = 'rgba(255, 255, 255, 0.4)'
+                // let parentNode = playerAnswers[i].parentNode.style.opacity = "70%"
+                // console.log(parentNode)
+                
+            }
+            document.getElementById('playerScoreContainer').innerHTML = `Score: ${playerScore}`
+            // console.log("-==-==-=-==--=")
+            // console.log(playerScore)
+        }
+        
+    }
+    
+    
+    
+    document.querySelector('.startButton').addEventListener('click', () => {
+        levelOne.shuffleColors()
+        levelOne.buildStage()
+        levelOne.shuffleColors()
+        levelOne.getPool()
+    })
+    
+    document.querySelector('.submitButton').addEventListener('click', checkScore)
+    
+    document.querySelector('.resetButton').addEventListener('click', levelOne.resetStage)
+    
+    
+    
+    
+    
+    // ///////////////////////////////////////////////////////////////////////////////////////
+    // // color Levels
+    // const CyanLevelColors = ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal']
+    
+    // // Let's make some Idividule Fuctions that work like below...
 // const shuffleColors = () => {
 //     for (let i = CyanLevelColors.length - 1; i > 0; i--) {
 //         let j = Math.floor(Math.random() * i)
