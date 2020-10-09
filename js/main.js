@@ -22,7 +22,7 @@ const levelOne = {
     // shuffleColors()
     // console.log(CyanLevelColors)
     ///////////////////////////////////
-    buildStage: function (eventObject) {
+    buildStage: function () {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             const createColorBox = document.createElement('div')
@@ -35,14 +35,14 @@ const levelOne = {
             guessBox.setAttribute('type', 'text')
             guessBox.setAttribute('class', 'answerInput')
             guessBox.setAttribute('id', 'answerInput')
-            guessBox.setAttribute('data-value', [i])
+            // guessBox.setAttribute('data-value', [i])//do i need this?
             createColorBox.appendChild(guessBox)
         }
         
     },
     
     
-    getPool: function (eventObject) {
+    getPool: function () {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             let possAnswer = document.createElement('li')
@@ -69,29 +69,17 @@ const levelOne = {
     const checkScore = () => {
         let playerAnswers = document.querySelectorAll('.answerInput')
         let correctAnswers = document.querySelectorAll('.colorBox')
-        ////test test//
-        console.log(playerAnswers[0].value)
-        console.log(correctAnswers[0].style.backgroundColor)
-        
-        
-        
         for (let i = 0; i < correctAnswers.length; i++) {
             if (playerAnswers[i].value === correctAnswers[i].style.backgroundColor) {
                 playerScore++
-            }
-            else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
+            } else if (playerAnswers[i].value !== correctAnswers[i].style.backgroundColor) {
                 console.log('wrong')
-                //i want to change the opacity of the incorrect answers
+
                 playerAnswers[i].style.color = 'rgba(255, 255, 255, 0.4)'
-                // let parentNode = playerAnswers[i].parentNode.style.opacity = "70%"
-                // console.log(parentNode)
-                
+
             }
             document.getElementById('playerScoreContainer').innerHTML = `Score: ${playerScore}`
-            // console.log("-==-==-=-==--=")
-            // console.log(playerScore)
         }
-        
     }
     
     
@@ -107,7 +95,7 @@ const levelOne = {
     
     document.querySelector('.resetButton').addEventListener('click', levelOne.resetStage)
     
-    
+    // add keyup eventListener for checkscore funtion.
     
     
     

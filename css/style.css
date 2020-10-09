@@ -107,8 +107,19 @@ input:focus {
     
 }
 
+h2 {
+    text-align: right;
+    padding-right: 20px;
+}
+
 ul {
     list-style: none;
+}
+
+li, p {
+    color: #7F86B3;
+    text-align: right;
+    padding-right: 20px;
 }
 /* 
 drk grn: #7FB3A7
