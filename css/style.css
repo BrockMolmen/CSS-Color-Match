@@ -27,15 +27,8 @@ body {
 .div2 { grid-area: 1 / 2 / 2 / 3; }
 .div3 { grid-area: 1 / 3 / 2 / 4; }
 
-    /* END GRID */
+/* END GRID */
 
-    /* 
-    drk grn: #7FB3A7
-    lt grn: #DBFFF7
-    yel: #FFE9CF
-    drk purp: #7F86B3
-    lt purp: #C2CBFF
-     */
 
 #navGrid {
     display: flex;
@@ -49,8 +42,6 @@ body {
 }
 
 #stageGrid {
-    /* display: flex; */
-    /* justify-content: space-around; */
     background-color:#7F86B3;
     min-width: 0;
     border-right: 8px solid #C2CBFF;
@@ -64,24 +55,26 @@ body {
 }
 
 /* ////////////// */
+h1 {
+    font-size: 76px;
+    font-weight: bolder;
+}
+
 #levelContainer { 
     display: flex;
     flex-flow: row wrap;
 }
 
+
 #colorBox {   
-display: flex;
-flex-flow: row wrap;
-align-content: center;
-width: 140px;
-height: 140px;
-border: 3px solid #FFE9CF;
-border-radius: 30%;
-margin: 10px;
-}
-h1 {
-    font-size: 36px;
-    font-weight: bolder;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    width: 140px;
+    height: 140px;
+    border: 3px solid #FFE9CF;
+    border-radius: 30%;
+    margin: 10px;
 }
 input {
     background: rgba(69, 69, 69, 0.6);
@@ -99,29 +92,28 @@ input:focus {
 }
 
 #playerScoreContainer {
+    font-size: 56px;
+}
+
+#buttons button {
+    background-color: rgba(0,0,0,0);
+    color: #7F86B3;
+    font-size: 54px;
+    border: none;
+    width: 85%;
+    height: 40px;
+    margin: 8px;
+    outline: none;
     
-    font-size: 35px;
-    /* align-self: flex-end; */
 }
 
 ul {
     list-style: none;
 }
-
-#buttons button {
-
-    background-color: #C2CBFF;
-    color: #7F86B3;
-    width: 85%;
-    height: 40px;
-    font-size: 18px;
-    margin: 8px;
-
-@media screen and (max-width: 800px) {
-    #levelContainer{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-                
-    }
-}
+/* 
+drk grn: #7FB3A7
+lt grn: #DBFFF7
+yel: #FFE9CF
+drk purp: #7F86B3
+lt purp: #C2CBFF
+     */
