@@ -5,9 +5,10 @@ let playerScore = 0
 
 const levelOne = {
     
-    // Cyan Color Array
+    // Level Color Array - used to build stage and answerPool
     CyanLevelColors: ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal'],
-    // Let's make some Idividule Fuctions that work like below...
+
+    //shuffles colors for random display 
     shuffleColors() {
         for (let i = this.CyanLevelColors.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * i)
@@ -16,13 +17,9 @@ const levelOne = {
             this.CyanLevelColors[j] = temp
         }
     },
-    // //////////////////////////Shuffle works and i can call it twice with differenet results
-    // shuffleColors()
-    // console.log(CyanLevelColors)
-    // shuffleColors()
-    // console.log(CyanLevelColors)
-    ///////////////////////////////////
-    buildStage: function () {
+
+    //builds divs and set background color and id/class
+    buildStage () {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             const createColorBox = document.createElement('div')
@@ -30,19 +27,18 @@ const levelOne = {
             createColorBox.setAttribute('class', 'colorBox')
             createColorBox.setAttribute('id', 'colorBox')
             levelContainer.appendChild(createColorBox)
-            //================================add Input box over the color box
+            //Adds an input box ontop of the colorbox div
             let guessBox = document.createElement('input')
             guessBox.setAttribute('type', 'text')
             guessBox.setAttribute('class', 'answerInput')
             guessBox.setAttribute('id', 'answerInput')
-            // guessBox.setAttribute('data-value', [i])//do i need this?
             createColorBox.appendChild(guessBox)
         }
         
     },
     
     
-    getPool: function () {
+    getPool () {
         for (let i = 0; i < this.CyanLevelColors.length; i++) {
             let colorName = this.CyanLevelColors[i]
             let possAnswer = document.createElement('li')
