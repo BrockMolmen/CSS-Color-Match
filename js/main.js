@@ -82,22 +82,3 @@ const levelOne = {
     
     document.querySelector('.resetButton').addEventListener('click', levelOne.resetStage)
     
-
-//                 //================================add Input box over the color box
-//                 let guessBox = document.createElement('input')
-//                 guessBox.setAttribute('class', 'answerInput')
-//                 createColorBox.appendChild(guessBox)
-// }}
-// ////////////////////////////////buildStage works and randomized colors
-// shuffleColors()
-// buildStage()
-
-// const getPool = () => {
-//     for (let i = 0; i < CyanLevelColors.length; i++) {
-//         let colorName = CyanLevelColors[i]
-//         let possAnswer = document.createElement('li')
-//         possAnswer.setAttribute('class', 'choice')
-//         possAnswer.innerHTML = colorName
-//         document.getElementById('answerPool').appendChild(possAnswer)
-// }}
-// ////////////////////////////getPool Works with shufflecolors
