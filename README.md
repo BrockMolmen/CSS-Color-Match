@@ -65,6 +65,9 @@ I wanted to build a game that would test and sharpen the players knowledge of th
  
 ---
 ### Current State and Future Development
-As of right now, level one (cyan) is a working product, I will soon be implementing more levels and methods for continuing after each round. I would also like to add a function that crosses out answers as the player inputs them as well as some static and scrolling functions to the stage container.
+
+![live Site - CSS Color Match](https://brockmolmen.github.io/CSS-Color-Match/)
+
+As of right now, level one (cyan) is a working product, I will soon be implementing more levels and methods for progressing through the game. I would also like to add a function that crosses out answers as the player inputs them as well as some static and scrolling functions to the stage container.
 
 
